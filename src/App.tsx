@@ -11,10 +11,7 @@ function App() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div
-          className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"
-          aria-label="Loading"
-        ></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
       </div>
     );
   }
@@ -25,7 +22,7 @@ function App() {
 
   return (
     <Layout user={user}>
-      {user?.role === 'admin' ? (
+      {user.role === 'admin' ? (
         <AdminDashboard user={user} />
       ) : (
         <Dashboard user={user} />
